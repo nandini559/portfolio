@@ -3,26 +3,26 @@ import React from "react";
 const Hero = () => {
   return (
     //  <!-- Hero Section -->
-    <div className=" bg-gray-900 pt-10 pb-16">
+    <div className=" bg-slate-900 pt-10 pb-16 pl-4 pr-4">
       <div className="hero__background">
         <div className="hero__particles"></div>
       </div>
       <section className="hero " id="hero">
         <div className="hero__content grid gap-4">
           <h1 className="hero__title text-center ">
-            <span className="hero__name text-8xl font-bold text-cyan-500 ">
+            <span className="hero__name text-7xl font-bold text-cyan-500 ">
               Saikat Barman
             </span>
           </h1>
-          <p className="hero__subtitle text-center text-cyan-500 text-3xl mb-3">
+          <p className="hero__subtitle text-center text-cyan-500 text-2xl mb-3">
             Senior Technology Leader
           </p>
           <div>
-            <p className="hero__description text-center text-stone-300 text-lg">
+            <p className="hero__description text-center text-stone-300 text-sm font-semibold">
               Innovative technology leader with 19+ years driving digital
               transformation across InsurTech, FinTech,
             </p>
-            <p className="hero__description text-center text-stone-300 text-lg mb-7 font-semibold">
+            <p className="hero__description text-center text-stone-300 text-sm mb-7 font-semibold">
               E-commerce, and Ed-Tech
             </p>
           </div>
@@ -41,7 +41,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="hero__scroll text-center mt-12">
+        <div className="hero__scroll text-center mt-6 text-sm">
           <div className="scroll-indicator text-stone-400">
             <span>Scroll Down</span>
             <div className="scroll-arrow"></div>

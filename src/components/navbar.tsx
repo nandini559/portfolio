@@ -19,12 +19,12 @@ const Navbar = ({ show = false }) => {
       <div
         className={`nav__container ${
           show ? "bg-white text-black" : " bg-black text-white "
-        } flex p-5 justify-between sticky top-0 z-50 shadow-md`}
+        } flex p-4 justify-between sticky top-0 z-50 shadow-md`}
       >
-        <div className="nav__brand text-sky-600 font-bold text-xl">
+        <div className="nav__brand  font-bold   text-blue-500 ">
           <span>Saikat Barman</span>
         </div>
-        <ul className="nav__menu flex  gap-6 text-stone-400 font-semibold ">
+        <ul className="nav__menu flex  gap-4 text-stone-300 font-semibold text-xs">
           <li>
             <button onClick={clickNavigateMain}>
               <a href="#hero" className="nav__link hover:text-black">
