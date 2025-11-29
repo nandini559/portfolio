@@ -4,7 +4,7 @@ const Webdev = () => {
   return (
     <div>
       <div className="mt-14 ">
-        <div className=" card flex  p-4 gap-6 mb-16">
+        <div className=" card flex  p-2 gap-6 mb-16">
           <div className="w-1/2">
             <img
               className="w-full h-full"
@@ -53,7 +53,7 @@ const Webdev = () => {
           </div>
         </div>
 
-        <div className=" card flex  p-4 gap-6 mb-16">
+        <div className=" card flex  p-2 gap-6 mb-16">
           <div className="w-1/2">
             <p className="bg-purple-700 p-1 rounded-full text-white w-1/3 text-center font-bold mb-3">
               AI/ML
@@ -100,7 +100,7 @@ const Webdev = () => {
           </div>
         </div>
 
-        <div className=" card flex  p-4 gap-6 mb-16">
+        <div className=" card flex  p-2 gap-6 mb-16">
           <div className="w-1/2">
             <img
               className="w-full h-full"
@@ -148,7 +148,7 @@ const Webdev = () => {
           </div>
         </div>
 
-        <div className=" card flex  p-4 gap-6 mb-16">
+        <div className=" card flex  p-2 gap-6 mb-16">
           <div className="w-1/2">
             <p className="bg-purple-700 p-1 rounded-full text-white w-1/3 text-center font-bold mb-3">
               Digital Marketing

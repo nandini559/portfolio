@@ -4,7 +4,7 @@ const ProjectHero = () => {
   return (
     <div>
       <div>
-        <div className="bg-orange-500 p-10">
+        <div className="bg-orange-500">
           <h2 className="font-bold text-8xl text-center text-white">
             Our Projects
           </h2>

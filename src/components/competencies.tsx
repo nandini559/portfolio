@@ -43,7 +43,7 @@ const Competencies: React.FC = () => {
         </div>
 
         <div className="competency-card bg-stone-800 text-white p-8 rounded-3xl w-1/2">
-          <div className="competency-card__icon size-20 text-sky-500 mb-4">
+          <div className="competency-card__icon size-12 text-sky-500 mb-4">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -72,7 +72,7 @@ const Competencies: React.FC = () => {
       </div>
 
       <div className="competency-card bg-stone-800 text-white p-8 rounded-3xl w-2/5 mt-8 ">
-        <div className="competency-card__icon size-20 text-sky-500 mb-4">
+        <div className="competency-card__icon size-12 text-sky-500 mb-4">
           <svg
             viewBox="0 0 24 24"
             fill="none"
