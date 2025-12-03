@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div>
       <div>
-        <div className="flex justify-between text-white bg-green-500 text-xs">
+        <div className="flex justify-between text-white bg-emerald-500 text-xs">
           <p>ORDER TRACKING</p>
           <p>Refer and extra discount</p>
           <p>140406</p>
@@ -27,7 +27,7 @@ const Navbar = () => {
           <p>SOLITIARIES</p>
           <p>GOLD COINS</p>
           <p>ALL JEWELLARY</p>
-          <button className="bg-green-500 rounded px-4 py-1 text-white">
+          <button className="bg-emarald-300 rounded px-4 py-1 text-white">
             OFFERS
           </button>
         </div>
