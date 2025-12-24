@@ -10,7 +10,7 @@ const Navbar = ({ show = false }) => {
   };
 
   const clickNavigateMain = () => {
-    navigate("/main");
+    navigate("/portfolio");
   };
 
   return (

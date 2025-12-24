@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* ALWAYS SHOW ARROWS
+.slick-prev,
+.slick-next {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 50;
+}
+
+/* Arrow icon styling */
+/* .slick-prev:before,
+.slick-next:before {
+  color: black;        /* change color if needed */
+  /* font-size: 30px; */
+/* } */
+ 
