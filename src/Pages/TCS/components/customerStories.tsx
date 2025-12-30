@@ -69,7 +69,7 @@ const CustomerStories = () => {
               <p className="mb-2 text-xl"> Read more</p>
             </div>
 
-            <div className="relative">
+            {/* <div className="relative">
               <img
                 className="h-96 w-80 rounded-xl"
                 src="/asset/tcs/pexels-fauxels-3184423.jpg"
@@ -79,7 +79,7 @@ const CustomerStories = () => {
                 <p className="mb-2">Transforms travel experience</p>
                 <p className="mb-2 text-xl"> Read more</p>
               </div>
-            </div>
+            </div> */}
 
             <div
               // className="relative"

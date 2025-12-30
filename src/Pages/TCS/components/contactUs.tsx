@@ -2,8 +2,8 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div>
-      <div className="bg-zinc-800 text-white place-items-center p-32">
+    <div className="mt-20">
+      <div className="bg-zinc-800 text-white place-items-center p-32 mt-10">
         <p className="text-5xl ">With you for the long</p>
         <p className="text-5xl"> run</p>
         <p className="mt-4">

@@ -10,7 +10,7 @@ const News = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
   };
   return (
     <div>
@@ -60,17 +60,6 @@ const News = () => {
               Stay up-to-date on all announcements ny TCS
             </p>
           </div>
-
-          {/* <div>
-          <img
-            className="h-96 w-60 rounded-xl"
-            src="/asset/tcs/pexels-fauxels-3184423.jpg"
-          ></img>
-          <p className="text-2xl font-semibold mb-2">NEWS ROOM</p>
-          <p className="mb-2 text-xl">
-            Stay up-to-date on all announcements ny TCS
-          </p>
-        </div> */}
         </Slider>
       </div>
     </div>

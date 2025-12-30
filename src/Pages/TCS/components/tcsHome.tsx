@@ -16,8 +16,8 @@ const TcsHome = () => {
       <WhatsNew />
       <CuttingEdge />
       <CustomerStories />
-      <ContactUs />
       <News />
+      <ContactUs />
       <Footer />
     </div>
   );
