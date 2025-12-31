@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Gmeet from "./Pages/GoogleMeet/components/gmeet";
 import Main from "./Pages/portfolio/components/main";
+import NftHome from "./Pages/NFT Landing page/components/nftHome";
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <Route path="/gemlay" element={<GemlayHome />} />
           <Route path="/tcs" element={<TcsHome />} />
           <Route path="/gmeet" element={<Gmeet />} />
+          <Route path="/nft" element={<NftHome />} />
         </Routes>
       </Router>
     </div>
