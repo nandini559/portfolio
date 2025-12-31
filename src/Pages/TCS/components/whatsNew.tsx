@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CustomArrowProps } from "react-slick";
+
+const PrevArrow: React.FC<CustomArrowProps> = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute -left-12 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-50 hover:scale-110 transition"
+  >
+    ◀
+  </button>
+);
+
+const NextArrow: React.FC<CustomArrowProps> = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute -right-12 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-50 hover:scale-110 transition"
+  >
+    ▶
+  </button>
+);
 
 const WhatsNew = () => {
   const settings = {
@@ -11,15 +30,17 @@ const WhatsNew = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
 
   return (
     <div>
       <div className="p-8">
         <p className="text-5xl font-semibold mb-8">What's New</p>
-        <div className=" relative group w-full overflow-visible">
+        <div className="relative w-full overflow-visible">
           <Slider {...settings}>
-            <div className="">
+            <div>
               <img
                 className="h-48 w-80 object-cover"
                 src="/asset/tcs/navigating-ai-innovation-ip-strategies-challenges-opportunities-web.jpg"
@@ -79,7 +100,7 @@ const WhatsNew = () => {
               <p className="text-xl font-semibold mt-8">Read More</p>
             </div>
 
-            <div className="">
+            <div>
               <img
                 className="h-48 w-80 object-cover"
                 src="/asset/tcs/navigating-ai-innovation-ip-strategies-challenges-opportunities-web.jpg"
@@ -94,7 +115,7 @@ const WhatsNew = () => {
               <p className="text-xl font-semibold mt-8">Read More</p>
             </div>
 
-            <div className="">
+            <div>
               <img
                 className="h-48 w-80 object-cover"
                 src="/asset/tcs/navigating-ai-innovation-ip-strategies-challenges-opportunities-web.jpg"
@@ -109,7 +130,7 @@ const WhatsNew = () => {
               <p className="text-xl font-semibold mt-8">Read More</p>
             </div>
 
-            <div className="">
+            <div>
               <img
                 className="h-48 w-80 object-cover"
                 src="/asset/tcs/navigating-ai-innovation-ip-strategies-challenges-opportunities-web.jpg"
