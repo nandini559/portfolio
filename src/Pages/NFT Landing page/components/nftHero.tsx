@@ -32,8 +32,17 @@ const NftHero = () => {
           </div>
         </div>
 
-        <div>
-          <img className="" src="/asset/nft/hero img-1.png"></img>
+        <div className="relative  w-72 h-72">
+          <img
+            className="absolute object-cover  ml-40"
+            alt="first"
+            src="/asset/nft/heroimg-1.png"
+          ></img>
+          <img
+            className="absolute  object-cover ml-40"
+            alt="first"
+            src="/asset/nft/heroimg.png"
+          ></img>
         </div>
       </div>
     </div>
