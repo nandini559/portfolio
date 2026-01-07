@@ -9,14 +9,14 @@ import Footer from "./footer";
 
 const NftHome = () => {
   return (
-    <div className="bg-black">
+    <div className=" bg-gradient-to-r from-black via-purple-700  to-black">
       <NftNavbar />
       <NftHero />
       <BitcoinArtWork />
-      {/* <Trending /> */}
+      <Trending />
       <PopularArtist />
       <JoinCommunity />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

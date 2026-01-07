@@ -3,9 +3,12 @@ import React from "react";
 const JoinCommunity = () => {
   return (
     <div>
-      <div className="text-white flex gap-20 p-10">
+      <div className="text-white flex gap-20 justify-center mb-44 ">
         <div>
-          <img className="" src="/asset/nft/ctaimg.png"></img>
+          <img
+            className="w-[280px] sm:w-[380px]"
+            src="/asset/nft/ctaimg.png"
+          ></img>
         </div>
 
         <div className="mt-32">
