@@ -4,99 +4,73 @@ type Props = {};
 
 const Trending = (props: Props) => {
   return (
-    <div>
-      <div className="text-white mr-16">
-        <div className="ml-36 mt-10">
-          <p className="text-7xl font-semibold mb-4">Trending This Week</p>
-          <p className="text-xl">
-            Lorem ipsum dolor sit amet, consectetur dolore adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et
-          </p>
-          <p> dolore magna aliqua.</p>
+    <section className="text-white px-6 lg:px-24 my-24">
+      {/* HEADING */}
+      <div className="max-w-4xl mb-20">
+        <p className="text-4xl sm:text-5xl lg:text-7xl font-semibold mb-4">
+          Trending This Week
+        </p>
+        <p className="text-base sm:text-xl text-gray-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+      {/* TWO COLUMN LAYOUT (DESKTOP) */}
+      <div className="flex flex-col lg:flex-row justify-center gap-16">
+        {/* LEFT COLUMN */}
+        <div className="flex flex-col gap-32 mt-24">
+          {[
+            { name: "Sebastian", img: "/asset/nft/Rectangle22743.png" },
+            { name: "Javier Miranda", img: "/asset/nft/Rectangle22745.png" },
+            { name: "Milad Fakurian", img: "/asset/nft/Rectangle22747.png" },
+          ].map((item, index) => (
+            <div key={index}>
+              <p className="text-xl font-semibold">{item.name}</p>
+              <div className="flex justify-between text-sm mb-2">
+                <p className="text-gray-400">Golden flower</p>
+                <p className="text-purple-500 font-semibold">2.3 ETH</p>
+              </div>
+              <img
+                src={item.img}
+                className="w-full max-w-[380px] h-[260px] sm:h-[320px] object-cover rounded-xl"
+                alt={item.name}
+              />
+            </div>
+          ))}
         </div>
 
-        <div className="flex gap-20 justify-center">
-          <div>
-            <div className="mt-32">
-              <p className="text-xl font-semibold">Sebastian</p>
-              <div className="flex justify-between">
-                <p className="text-xs">Golden flower</p>
-                <p className="text-purple-600 ">2.3 ETH</p>
+        {/* RIGHT COLUMN */}
+        <div className="flex flex-col gap-32">
+          {[
+            { name: "Farhat Deniz", img: "/asset/nft/Rectangle22742.png" },
+            {
+              name: "Polina Kondrashova",
+              img: "/asset/nft/Rectangle22744.png",
+            },
+            { name: "Erick Butler", img: "/asset/nft/Rectangle22746.png" },
+          ].map((item, index) => (
+            <div key={index}>
+              <p className="text-xl font-semibold">{item.name}</p>
+              <div className="flex justify-between text-sm mb-2">
+                <p className="text-gray-400">Golden flower</p>
+                <p className="text-purple-500 font-semibold">2.3 ETH</p>
               </div>
               <img
-                src="/asset/nft/Rectangle22743.png"
-                className="h-80 w-96"
-              ></img>
+                src={item.img}
+                className="w-full max-w-[380px] h-[260px] sm:h-[320px] object-cover rounded-xl"
+                alt={item.name}
+              />
             </div>
+          ))}
 
-            <div className="mt-32">
-              <p className="text-xl font-semibold">Javier Miranda</p>
-              <div className="flex justify-between">
-                <p className="text-xs">Golden flower</p>
-                <p className="text-purple-600 ">2.3 ETH</p>
-              </div>
-              <img
-                src="/asset/nft/Rectangle22745.png"
-                className="h-80 w-96"
-              ></img>
-            </div>
-
-            <div className="mt-32">
-              <p className="text-xl font-semibold">Milad Fakurian</p>
-              <div className="flex justify-between">
-                <p className="text-xs">Golden flower</p>
-                <p className="text-purple-600 ">2.3 ETH</p>
-              </div>
-              <img
-                src="/asset/nft/Rectangle22747.png"
-                className="h-80 w-96"
-              ></img>
-            </div>
-          </div>
-
-          <div>
-            <div className="mt-8">
-              <p className="text-xl font-semibold">Farhat Deniz</p>
-              <div className="flex justify-between">
-                <p className="text-xs">Golden flower</p>
-                <p className="text-purple-600 ">2.3 ETH</p>
-              </div>
-              <img
-                src="/asset/nft/Rectangle22742.png"
-                className="h-80 w-96"
-              ></img>
-            </div>
-
-            <div className="mt-32">
-              <p className="text-xl font-semibold">Polina Kondrashova</p>
-              <div className="flex justify-between">
-                <p className="text-xs">Golden flower</p>
-                <p className="text-purple-600 ">2.3 ETH</p>
-              </div>
-              <img
-                src="/asset/nft/Rectangle22744.png"
-                className="h-80 w-96"
-              ></img>
-            </div>
-
-            <div className="mt-32">
-              <p className="text-xl font-semibold">Erick Butler</p>
-              <div className="flex justify-between">
-                <p className="text-xs">Golden flower</p>
-                <p className="text-purple-600 ">2.3 ETH</p>
-              </div>
-              <img
-                src="/asset/nft/Rectangle22746.png"
-                className="h-80 w-96"
-              ></img>
-            </div>
-            <button className="bg-white text-black px-6 py-2 rounded font-semibold mt-10">
-              Explore more
-            </button>
-          </div>
+          {/* BUTTON */}
+          <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold w-fit mt-4">
+            Explore more
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
