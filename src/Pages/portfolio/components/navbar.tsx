@@ -22,7 +22,7 @@ const Navbar = ({ show = false }) => {
         } flex p-4 justify-between sticky top-0 z-50 shadow-md`}
       >
         <div className="nav__brand  font-bold   text-blue-500 ">
-          <span>Saikat Barman</span>
+          <span>Nandini Tarafdar</span>
         </div>
         <ul className="nav__menu flex  gap-4 text-stone-300 font-semibold text-xs">
           <li>

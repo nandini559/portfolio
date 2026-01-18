@@ -11,11 +11,11 @@ const Hero = () => {
         <div className="hero__content grid gap-4">
           <h1 className="hero__title text-center ">
             <span className="hero__name text-7xl font-bold text-cyan-500 ">
-              Saikat Barman
+              Nandini Tarafdar
             </span>
           </h1>
           <p className="hero__subtitle text-center text-cyan-500 text-2xl mb-3">
-            Senior Technology Leader
+            Student
           </p>
           <div>
             <p className="hero__description text-center text-stone-300 text-sm font-semibold">
