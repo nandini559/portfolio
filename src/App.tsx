@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Gmeet from "./Pages/GoogleMeet/components/gmeet";
 import Main from "./Pages/portfolio/components/main";
 import NftHome from "./Pages/NFT Landing page/components/nftHome";
+import SingulariesHome from "./Pages/Singularies Ventures/components/singulariesHome";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/singularies.ventures" element={<SingulariesHome />} />
           <Route path="/gemlay" element={<GemlayHome />} />
           <Route path="/tcs" element={<TcsHome />} />
           <Route path="/gmeet" element={<Gmeet />} />
