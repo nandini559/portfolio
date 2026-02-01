@@ -11,6 +11,7 @@ import Gmeet from "./Pages/GoogleMeet/components/gmeet";
 import Main from "./Pages/portfolio/components/main";
 import NftHome from "./Pages/NFT Landing page/components/nftHome";
 import SingulariesHome from "./Pages/Singularies Ventures/components/singulariesHome";
+import ExpanseTrackerHome from "./Pages/Expanse Tracker/expanseTrackerHome";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,8 @@ const App: React.FC = () => {
           <Route path="/tcs" element={<TcsHome />} />
           <Route path="/gmeet" element={<Gmeet />} />
           <Route path="/nft" element={<NftHome />} />
+          <Route path="/expanse-tracker" element={<ExpanseTrackerHome />} />
+
         </Routes>
       </Router>
     </div>
