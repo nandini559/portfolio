@@ -18,6 +18,8 @@ import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SignupForm from "./Pages/Expanse Tracker/signupForm";
 import LoginForm from "./Pages/Expanse Tracker/loginForm";
+import Login from "./Pages/Expanse Tracker/login";
+import Register from "./Pages/Expanse Tracker/register";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -78,6 +80,8 @@ const App: React.FC = () => {
           />}/>
         <Route path="/signupform" element={<SignupForm />}/>
         <Route path="/loginform" element={<LoginForm />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<Register />}/>
       </Routes>
     </Router>
   </div>);
