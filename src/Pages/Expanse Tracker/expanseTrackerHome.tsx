@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ExpenseForm from "./expanseForm";
-import ExpenseList from "./expanseList";
+import ExpenseList from "./expenseList";
 import { addExpense, deleteExpense, getExpenses } from "../../api/expanseBackendAPI";
 import { Expense } from "../../types/expanse";
+import { Route } from "react-router-dom";
 
 
 const ExpanseTrackerHome = () => {
@@ -57,7 +58,16 @@ const ExpanseTrackerHome = () => {
    
       <ExpenseForm onAdd={addExpenseHandler} />
     
-      <ExpenseList expenses={expenses} onDelete={deleteExpenseHandler} />
+    {/* <Route
+  path="/ExpenseList"
+  element={
+    <ExpenseList
+      expenses={expenses}
+      onDelete={deleteExpenseHandler}
+    />
+  }
+/> */}
+
       
     </div>
   );

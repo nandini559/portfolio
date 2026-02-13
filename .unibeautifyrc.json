@@ -1,0 +1,8 @@
+{
+  "JavaScript": {
+    "beautifiers": ["Prettier"]
+  },
+  "Python": {
+    "beautifiers": ["Black"]
+  }
+}
