@@ -1,19 +1,33 @@
 import {Expense} from "../../types/expanse";
 import {useNavigate} from "react-router-dom";
 import LogoutButton from "./logout";
+
 interface ExpenseListProps {
   expenses: Expense[];
   onDelete: (id : number) => void;
 }
 
 function ExpenseList({expenses, onDelete} : ExpenseListProps) {
+  // ✅ Calculate Total Expense
+  const totalExpense = expenses.reduce((total, expense) => {
+    return total + Number(expense.amount);
+  }, 0);
+
+  console.log(expenses);
+
   return (<div className="bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 rounded-2xl shadow-lg p-6 max-w-md mx-auto">
     <h3 className="text-xl font-semibold mb-4 text-gray-800">
       💸 Expense List
     </h3>
 
-    <div className="flex justify-end">
+    <div className="flex justify-end mb-5">
       <LogoutButton/>
+    </div>
+
+    {/* ✅ Total Section */}
+    <div className="mt-6 mb-5 border-t pt-4 flex justify-between text-lg font-semibold text-gray-800">
+      <span>Total</span>
+      <span>₹{totalExpense}</span>
     </div>
 
     <ul className="space-y-3">
