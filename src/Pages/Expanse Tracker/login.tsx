@@ -18,10 +18,11 @@ function Login() {
     try {
       const res = await loginUser(form);
 
-      localStorage.setItem("accessToken", res.accessToken);
+      localStorage.setItem("token", res.data.access_token);
 
-      navigate("/expenseList");
+      navigate("/expense-list");
     } catch (error) {
+      console.error(error);
       alert("Login failed 😭");
     }
   };

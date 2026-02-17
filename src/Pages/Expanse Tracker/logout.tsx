@@ -11,6 +11,7 @@ function LogoutButton() {
       console.log("Logout API failed");
     } finally {
       localStorage.removeItem("accessToken"); // always remove token
+
       navigate("/login");
     }
   };

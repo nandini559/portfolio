@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes, BrowserRouter} from "react-router-dom";
 import Project from "./Pages/portfolio/projects/project";
 import GemlayHome from "./Pages/Gemlay Website/components/gemlayHome";
 import Home from "./Pages/TCS/components/tcsHome";
@@ -18,6 +18,8 @@ import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./Pages/Expanse Tracker/login";
 import Register from "./Pages/Expanse Tracker/register";
+import PortfolioHome from "./Pages/My Portfolio/components/portfolioHome";
+import ProtectedRoute from "./routes/protectedRoute";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -60,6 +62,8 @@ const App: React.FC = () => {
       <ToastContainer position="top-right" autoClose={2000}/>
 
       <Routes>
+        <Route path="/home" element={<PortfolioHome />}/>
+
         <Route path="/" element={<Main />}/>
         <Route path="/project" element={<Project />}/>
         <Route path="/singularies.ventures" element={<SingulariesHome />}/>
@@ -67,15 +71,20 @@ const App: React.FC = () => {
         <Route path="/tcs" element={<TcsHome />}/>
         <Route path="/gmeet" element={<Gmeet />}/>
         <Route path="/nft" element={<NftHome />}/>
-        <Route path="/expanse-tracker" element={<ExpanseTrackerHome />}/>
-        <Route path="/expenseList" element={<ExpenseList
-          expenses = {
-            expenses
-          }
-          onDelete = {
-            deleteExpenseHandler
-          }
-          />}/>
+
+        <Route element={<ProtectedRoute />}>
+          <Route path="/expanse-tracker" element={<ExpanseTrackerHome />}/>
+
+          <Route path="/expense-list" element={<ExpenseList
+            expenses = {
+              expenses
+            }
+            onDelete = {
+              deleteExpenseHandler
+            }
+            />}/>
+        </Route>
+
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
       </Routes>

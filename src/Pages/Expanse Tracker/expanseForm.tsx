@@ -34,7 +34,7 @@ function ExpenseForm({onAdd} : ExpenseFormProps) {
 
       // ✅ navigate AFTER toast
       setTimeout(() => {
-        navigate("/ExpenseList");
+        navigate("/expense-list");
       }, 500);
     } catch (error) {
       toast.error("Failed to add expense ❌");

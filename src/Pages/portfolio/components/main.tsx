@@ -10,21 +10,19 @@ import Contact from "./contact";
 import Footer from "./footer";
 
 const Main = () => {
-  return (
-    <div>
-      <div className="bg-black">
-        <Navbar />
-        <Hero />
-        <About />
-        <Competencies />
-        <Experience />
-        <Achievements />
-        <Technologies />
-        <Contact />
-        <Footer />
-      </div>
+  return (<div>
+    <div className="bg-black">
+      <Navbar/>
+      <Hero/>
+      <About/>
+      <Competencies/>
+      <Experience/>
+      <Achievements/>
+      <Technologies/>
+      <Contact/>
+      <Footer/>
     </div>
-  );
+  </div>);
 };
 
 export default Main;
