@@ -63,6 +63,10 @@ function ExpenseForm({onAdd} : ExpenseFormProps) {
         <button onClick={submitHandler} className="w-full mt-4 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold tracking-wide hover:scale-[1.02] active:scale-95 transition-all shadow-lg">
           Add Expense
         </button>
+
+        <button onClick={() => navigate("/expense-list")} className="w-full mt-4 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold tracking-wide hover:scale-[1.02] active:scale-95 transition-all shadow-lg">
+          See your Expanses
+        </button>
       </div>
     </div>
   </div>);

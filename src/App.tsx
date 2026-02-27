@@ -73,7 +73,7 @@ const App: React.FC = () => {
         <Route path="/nft" element={<NftHome />}/>
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/expanse-tracker" element={<ExpanseTrackerHome />}/>
+          <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>
 
           <Route path="/expense-list" element={<ExpenseList
             expenses = {

@@ -1,10 +1,10 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {loginUser} from "../../api/auth";
-
+import Cookies from "js-cookie";
 function Login() {
   const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({email: "", password: ""});
 
   const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => {
@@ -16,13 +16,23 @@ function Login() {
 
   const handleSubmit = async () => {
     try {
+      setLoading(true);
+
       const res = await loginUser(form);
 
-      localStorage.setItem("token", res.data.access_token);
+      // Cookies.set("token", res.access_token);
+      // Cookies.set("user", JSON.stringify(res.user), {expires: 1});
 
-      navigate("/expense-list");
+      Cookies.set("token", res.access_token, {
+        expires: 1,
+        path: "/"
+      });
+
+      setTimeout(() => {
+        navigate("/expense-tracker");
+      });
     } catch (error) {
-      console.error(error);
+      setLoading(false);
       alert("Login failed 😭");
     }
   };
@@ -38,8 +48,12 @@ function Login() {
 
         <input name="password" type="password" placeholder="Enter your password" onChange={handleChange} className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"/>
 
-        <button onClick={handleSubmit} className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">
-          Login
+        <button onClick={handleSubmit} disabled={loading} className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md disabled:opacity-50">
+          {
+            loading
+              ? "Logging in..."
+              : "Login"
+          }
         </button>
       </div>
 

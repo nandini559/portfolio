@@ -1,13 +1,27 @@
+import {useEffect, useState} from "react";
 import {Navigate, Outlet} from "react-router-dom";
+import Cookies from "js-cookie";
 
 const ProtectedRoute = () => {
-  const token = localStorage.getItem("token");
+  const [loading, setLoading] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
 
-  if (!token) {
-    return <Navigate to="/login" replace={true}/>;
-  }
+  useEffect(() => {
+    const token = Cookies.get("token");
 
-  return <Outlet/>;
+    if (token) {
+      setIsAuth(true);
+    }
+
+    setLoading(false);
+  }, []);
+
+  if (loading) 
+    return null; // or spinner
+  
+  return isAuth
+    ? <Outlet/>
+    : <Navigate to="/login" replace={true}/>;
 };
 
 export default ProtectedRoute;

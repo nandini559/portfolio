@@ -1,42 +1,13 @@
-import axios from "axios";
-import {Navigate} from "react-router-dom";
+import axios, { AxiosError } from "axios";
+import Cookies from "js-cookie";
 
-const API = axios.create({
-  baseURL: "http://localhost:3000" // your backend URL
+export const API = axios.create({
+  baseURL: "http://localhost:3000"
 });
 
-// API.interceptors.response.use(
-//   (response) => response,
-//   (error: any) => {
-//     if (error?.response?.status === 401) {
-//       localStorage.removeItem("accessToken");
-//       window.location.href = "/login";
-//     }
-//     return Promise.reject(error);
-//   }
-// );
-
-// REGISTER API
-export const registerUser = async (data : {
-  name: string;
-  email: string;
-  password: string;
-}) => {
-  const response = await API.post("/auth/register", data);
-  return response.data;
-};
-
-// LOGIN API
-export const loginUser = async (data : {
-  email: string;
-  password: string
-}) => {
-  const response = await API.post("/auth/login", data);
-  return response.data;
-};
-
+// 🔥 SEND TOKEN FROM COOKIE IN HEADER
 API.interceptors.request.use((config) => {
-  const token = localStorage.getItem("accessToken");
+  const token = Cookies.get("token");
 
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
@@ -45,17 +16,45 @@ API.interceptors.request.use((config) => {
   return config;
 });
 
-export const logoutUser = async () => {
-  const token = localStorage.getItem("accessToken");
-
-  return await API.post("/auth/logout", {}, {
-    headers: {
-      Authorization: `Bearer ${token}`
+// 🔥 AUTO LOGOUT ON 401
+API.interceptors.response.use(
+  (response) => response,
+  (error: AxiosError) => {
+    if (error.response?.status === 401) {
+      Cookies.remove("token");
+      Cookies.remove("user");
     }
-  });
+    return Promise.reject(error);
+  }
+);
+
+// REGISTER
+export const registerUser = async (data: {
+  name: string;
+  email: string;
+  password: string;
+}) => {
+  const res = await API.post("/auth/register", data);
+  return res.data;
 };
 
-// const handleLogout = () => {
-//   localStorage.removeItem("accessToken");
-//   Navigate("/login");
-// };
+// LOGIN
+export const loginUser = async (data: {
+  email: string;
+  password: string;
+}) => {
+  const res = await API.post("/auth/login", data);
+  return res.data;
+};
+
+// LOGOUT
+export const logoutUser = async () => {
+  const res = await API.post("/auth/logout");
+  return res.data;
+};
+
+// GET PROFILE
+export const getProfile = async () => {
+  const res = await API.get("/auth/me");
+  return res.data;
+};

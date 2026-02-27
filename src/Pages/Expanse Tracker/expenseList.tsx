@@ -1,6 +1,8 @@
 import {Expense} from "../../types/expanse";
 import {useNavigate} from "react-router-dom";
 import LogoutButton from "./logout";
+import {useEffect, useState} from "react";
+import {getProfile} from "../../api/auth";
 
 interface ExpenseListProps {
   expenses: Expense[];
@@ -8,6 +10,21 @@ interface ExpenseListProps {
 }
 
 function ExpenseList({expenses, onDelete} : ExpenseListProps) {
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const data = await getProfile();
+        setUser(data);
+      } catch (error) {
+        console.log("Not authorized");
+      }
+    };
+
+    fetchUser();
+  }, []);
+
   // ✅ Calculate Total Expense
   const totalExpense = expenses.reduce((total, expense) => {
     return total + Number(expense.amount);
