@@ -17,7 +17,7 @@ function Register() {
   const handleSubmit = async () => {
     try {
       await registerUser(form);
-      navigate("/expanse-tracker");
+      navigate("/expense-tracker");
     } catch (error) {
       alert("Registration failed 😭");
     }

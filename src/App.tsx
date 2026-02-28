@@ -22,7 +22,7 @@ import PortfolioHome from "./Pages/My Portfolio/components/portfolioHome";
 import ProtectedRoute from "./routes/protectedRoute";
 
 const App: React.FC = () => {
-  const [expenses, setExpenses] = useState<Expense[]>([]);
+  const [expenses, setExpenses] = useState<any[]>([]);
 
   // ✅ Fetch all expenses on page load
   useEffect(() => {
@@ -47,7 +47,7 @@ const App: React.FC = () => {
   };
 
   // ✅ Delete expense
-  const deleteExpenseHandler = async (id : number) => {
+  const deleteExpenseHandler = async (id : string) => {
     try {
       await deleteExpense(id);
       setExpenses((prev) => prev.filter((e) => e.id !== id));
@@ -73,23 +73,22 @@ const App: React.FC = () => {
         <Route path="/nft" element={<NftHome />}/>
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>
-
-          <Route path="/expense-list" element={<ExpenseList
+          <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/> {/* {/* <Route path="/expense-list" element={<ExpenseList
             expenses = {
               expenses
             }
-            onDelete = {
-              deleteExpenseHandler
-            }
-            />}/>
-        </Route>
+            // onDelete = {
+            //   deleteExpenseHandler
+            // }
+            />}/> */
+          }
+          </Route>
 
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
       </Routes>
     </Router>
   </div>);
-};
+        };
 
 export default App;

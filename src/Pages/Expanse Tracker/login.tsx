@@ -19,7 +19,7 @@ function Login() {
       setLoading(true);
 
       const res = await loginUser(form);
-
+      // console.log("res", res.access_token);
       // Cookies.set("token", res.access_token);
       // Cookies.set("user", JSON.stringify(res.user), {expires: 1});
 
