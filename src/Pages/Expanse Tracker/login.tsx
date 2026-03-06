@@ -19,14 +19,16 @@ function Login() {
       setLoading(true);
 
       const res = await loginUser(form);
-      // console.log("res", res.access_token);
-      // Cookies.set("token", res.access_token);
-      // Cookies.set("user", JSON.stringify(res.user), {expires: 1});
+      console.log("res", res.access_token);
+      Cookies.set("token", res.access_token);
+      Cookies.set("user", JSON.stringify(res.user), {expires: 1});
 
       Cookies.set("token", res.access_token, {
         expires: 1,
         path: "/"
       });
+
+      console.log("Saved Cookie:", Cookies.get("token"));
 
       setTimeout(() => {
         navigate("/expense-tracker");
@@ -40,7 +42,7 @@ function Login() {
   return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600">
     <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-        Welcome Back 👋
+        Hi User👋
       </h2>
 
       <div className="flex flex-col gap-4">

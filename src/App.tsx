@@ -63,8 +63,9 @@ const App: React.FC = () => {
 
       <Routes>
         <Route path="/home" element={<PortfolioHome />}/>
+        <Route path="/portfolio" element={<Main />}/>
 
-        <Route path="/" element={<Main />}/>
+        <Route path="/" element={<Login />}/>
         <Route path="/project" element={<Project />}/>
         <Route path="/singularies.ventures" element={<SingulariesHome />}/>
         <Route path="/gemlay" element={<GemlayHome />}/>
@@ -73,22 +74,24 @@ const App: React.FC = () => {
         <Route path="/nft" element={<NftHome />}/>
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/> {/* {/* <Route path="/expense-list" element={<ExpenseList
+          <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>{" "}
+          {/* <Route path="/expense-list" element={<ExpenseList
             expenses = {
               expenses
             }
             // onDelete = {
             //   deleteExpenseHandler
             // }
-            />}/> */
+            />}/>
+           */
           }
-          </Route>
+        </Route>
 
-        <Route path="/login" element={<Login />}/>
+        {/* <Route path="/login" element={<Login />}/> */}
         <Route path="/register" element={<Register />}/>
       </Routes>
     </Router>
   </div>);
-        };
+};
 
 export default App;
