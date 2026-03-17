@@ -20,6 +20,9 @@ import Login from "./Pages/Expanse Tracker/login";
 import Register from "./Pages/Expanse Tracker/register";
 import PortfolioHome from "./Pages/My Portfolio/components/portfolioHome";
 import ProtectedRoute from "./routes/protectedRoute";
+import Contact from "./Pages/portfolio/components/contact";
+import Productlist from "./products/productlist";
+import Productdetails from "./products/productdetails";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<any[]>([]);
@@ -72,6 +75,9 @@ const App: React.FC = () => {
         <Route path="/tcs" element={<TcsHome />}/>
         <Route path="/gmeet" element={<Gmeet />}/>
         <Route path="/nft" element={<NftHome />}/>
+        <Route path="/contact" element={<Contact />}/>
+        <Route path="/product-list" element={<Productlist />}/>
+        <Route path="/product-details" element={<Productdetails />}/>
 
         <Route element={<ProtectedRoute />}>
           <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>{" "}
