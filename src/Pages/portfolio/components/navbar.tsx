@@ -20,53 +20,40 @@ const Navbar = ({
   <nav className="nav" id="navbar">
     <div className={`nav__container 
       
-           flex p-4 justify-between sticky top-0 z-50 shadow-md`}>
-      <div className="nav__brand  font-bold text-white ">
+           flex p-4 justify-between sticky top-0 z-50  text-black`}>
+      <div className="nav__brand  font-bold  ">
         <span>Nandini Tarafdar</span>
       </div>
-      <ul className="nav__menu flex  gap-4 text-stone-300 font-semibold text-xs">
+      <ul className="nav__menu flex  gap-4  font-semibold text-xs">
         <li>
           <button onClick={clickNavigateMain}>
-            <a href="#hero" className="nav__link hover:text-black">
+            <a href="#hero" className="nav__link hover:font-bold">
               Home
             </a>
           </button>
         </li>
         <li>
           <button onClick={clickNavigateMain}>
-            <a href="#about" className="nav__link hover:text-black">
+            <a href="#about" className="nav__link hover:font-bold">
               About
             </a>
           </button>
         </li>
         <li>
           <button onClick={clickNavigateMain}>
-            <a href="#experience" className="nav__link hover:text-black">
+            <a href="#experience" className="nav__link mr-3 hover:font-bold">
               Education
             </a>
           </button>
-        </li>
-        {/* <li>
-          <button onClick={clickNavigateMain}>
-            <a href="#achievements" className="nav__link hover:text-black">
-              Projects
-            </a>
-          </button>
-        </li> */
-        }
-        <li>
-          {/* <a href="#project" className="nav__link hover:text-white">
-              Projects
-            </a> */
-          }
-          <button className="nav__link hover:text-black" onClick={clickNavigate}>
+
+          <button className="nav__link hover:font-bold" onClick={clickNavigate}>
             Projects
           </button>
         </li>
 
         <li>
           <button onClick={clickNavigateMain}>
-            <a href="#contact" className="nav__link hover:text-black">
+            <a href="#contact" className="nav__link hover:font-bold">
               Contact
             </a>
           </button>

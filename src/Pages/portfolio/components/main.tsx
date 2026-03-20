@@ -10,14 +10,17 @@ import Contact from "./contact";
 import Footer from "./footer";
 
 const Main = () => {
-  return (<div>
-    <div className="bg-black">
+  return (<div style={{
+      backgroundImage: `url('/portfolio/paper3.jpg')`
+    }}>
+    <div className="absolute inset-0 "></div>
+
+    <div className="relative z-10">
       <Navbar/>
       <Hero/>
-      <About/>
-      <Competencies/>
-      <Experience/>
-      <Achievements/>
+      <About/> {/* <Competencies/> */}
+      {/* <Experience/> */}
+      {/* <Achievements/> */}
       <Technologies/>
       <Contact/>
       <Footer/>

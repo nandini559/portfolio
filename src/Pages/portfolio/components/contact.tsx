@@ -22,11 +22,9 @@ const Contact = () => {
     }).catch((error) => console.log(error));
   };
 
-  return (<div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200">
-    <form onSubmit={handleSubmit} className="bg-white/70 backdrop-blur-lg shadow-xl rounded-2xl p-8 w-[350px] flex flex-col gap-4">
-      <p className="text-2xl font-semibold text-center text-gray-700">
-        Contact
-      </p>
+  return (<div className="flex items-center justify-center min-h-screen ">
+    <form onSubmit={handleSubmit} className="border-2 shadow-xl rounded-2xl  w-[350px] flex flex-col gap-4 p-10">
+      <p className="text-7xl font-semibold text-center ">Contact</p>
 
       <input name="Name" placeholder="Name" className="p-2 border rounded-lg outline-none focus:ring-2 focus:ring-purple-400"/>
 
