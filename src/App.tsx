@@ -11,7 +11,6 @@ import Main from "./Pages/portfolio/components/main";
 import NftHome from "./Pages/NFT Landing page/components/nftHome";
 import SingulariesHome from "./Pages/Singularies Ventures/components/singulariesHome";
 import ExpanseTrackerHome from "./Pages/Expanse Tracker/expanseTrackerHome";
-import ExpenseList from "./Pages/Expanse Tracker/expenseList";
 import {addExpense, deleteExpense, getExpenses} from "./api/expanseBackendAPI";
 import {Expense} from "./types/expanse";
 import {ToastContainer} from "react-toastify";
@@ -21,6 +20,7 @@ import Register from "./Pages/Expanse Tracker/register";
 import PortfolioHome from "./Pages/My Portfolio/components/portfolioHome";
 import ProtectedRoute from "./routes/protectedRoute";
 import Contact from "./Pages/portfolio/components/contact";
+import CampbellTeaHome from "./Pages/campBell Tea/components/campbellTeaHome";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<any[]>([]);
@@ -65,7 +65,6 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/home" element={<PortfolioHome />}/>
         <Route path="/portfolio" element={<Main />}/>
-
         <Route path="/" element={<Login />}/>
         <Route path="/project" element={<Project />}/>
         <Route path="/singularies.ventures" element={<SingulariesHome />}/>
@@ -74,12 +73,11 @@ const App: React.FC = () => {
         <Route path="/gmeet" element={<Gmeet />}/>
         <Route path="/nft" element={<NftHome />}/>
         <Route path="/contact" element={<Contact />}/>
-
         <Route element={<ProtectedRoute />}>
           <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>{" "}
         </Route>
-
         <Route path="/register" element={<Register />}/>
+        <Route path="/campbell-tea" element={<CampbellTeaHome />}/>
       </Routes>
     </Router>
   </div>);
