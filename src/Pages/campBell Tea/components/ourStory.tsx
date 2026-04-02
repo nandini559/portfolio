@@ -1,38 +1,49 @@
 import React from "react";
 
 const OurStory = () => {
-  return (<div>
-    <div className="flex gap-10 bg-slate-50 mt-32 ">
-      <div className="w-1/2 mt-20 p-4">
-        <img src="/asset/campbell-tea/our-story-section.webp" alt="tea"></img>
+  return (<div className="bg-slate-50 mt-16 md:mt-32 px-5 md:px-10 py-10">
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      {/* Image */}
+      <div className="w-full md:w-1/2">
+        <img src="/asset/campbell-tea/our-story-section.webp" alt="tea" className="w-full h-auto rounded-lg object-cover"/>
       </div>
 
-      <div className="w-1/2 mt-40 p-6">
-        <p className="font-thin mb-3 text-amber-900 text-sm mt-10">
+      {/* Text */}
+      <div className="w-full md:w-1/2">
+        <p className="font-thin mb-2 text-amber-900 text-xs md:text-sm">
           OUR STORY
         </p>
-        <p className="text-5xl mb-2">Brewed for</p>
-        <p className="text-5xl mb-6">Bliss</p>
-        <p className="text-xl font-thin mb-5">
+
+        <p className="text-3xl md:text-5xl mb-2">Brewed for</p>
+        <p className="text-3xl md:text-5xl mb-6">Bliss</p>
+
+        <p className="text-sm md:text-lg font-thin mb-4">
           Campbell Tea was born from a simple belief: that everyday rituals deserve extraordinary ingredients. We work directly with tea gardens across Assam, Darjeeling, and the Nilgiri hills to source leaves at their peak.
         </p>
-        <p className="text-xl font-thin">
+
+        <p className="text-sm md:text-lg font-thin mb-8">
           No artificial flavors, no shortcuts. Just pure, certified organic tea crafted with patience and purpose. Every blend reflects the terroir of its origin and the hands that nurtured it.
         </p>
-        <div className="flex justify-between mt-20">
+
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-4 text-center md:text-left">
           <div>
-            <p className="text-amber-900 text-3xl font-thin">100%</p>
-            <p>ORGANIC</p>
+            <p className="text-amber-900 text-xl md:text-3xl font-thin">
+              100%
+            </p>
+            <p className="text-xs md:text-base">ORGANIC</p>
           </div>
 
           <div>
-            <p className="text-amber-900 text-3xl font-thin">8+</p>
-            <p>REGIONS</p>
+            <p className="text-amber-900 text-xl md:text-3xl font-thin">8+</p>
+            <p className="text-xs md:text-base">REGIONS</p>
           </div>
 
           <div>
-            <p className="text-amber-900 text-3xl font-thin">2018</p>
-            <p>EXTABLISHED</p>
+            <p className="text-amber-900 text-xl md:text-3xl font-thin">
+              2018
+            </p>
+            <p className="text-xs md:text-base">ESTABLISHED</p>
           </div>
         </div>
       </div>

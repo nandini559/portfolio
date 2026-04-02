@@ -1,84 +1,27 @@
 import React from "react";
 
+const teas = Array(10).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243"});
+
 const TeaCollection = () => {
-  return (<div>
-    <div className="bg-white p-5">
-      <p className="font-thin mb-3 text-amber-900 text-sm mt-10">
-        THE COLLECTION
-      </p>
-      <p className="text-5xl mb-4">Our Teas</p>
+  return (<div className="bg-white px-5 md:px-10 py-10">
+    {/* Heading */}
+    <p className="font-thin mb-2 text-amber-900 text-xs md:text-sm">
+      THE COLLECTION
+    </p>
+    <p className="text-3xl md:text-5xl mb-8">Our Teas</p>
 
-      <div className="grid grid-cols-5 gap-6">
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2 ">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
+    {/* Responsive Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      {
+        teas.map((tea, index) => (<div key={index} className="bg-slate-100 p-3 rounded-xl hover:shadow-md transition">
+          <p className="text-amber-900 text-xs font-thin mb-2">{tea.tag}</p>
 
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
+          <img src={tea.image} alt="tea" className="w-full h-40 object-cover rounded-md mb-3"/>
 
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-
-        <div className="bg-slate-100 p-2 rounded-lg">
-          <p className="text-amber-900 text-sm font-thin p-2">Bestseller</p>
-          <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243" alt="tea"></img>
-          <p>Special Masala Chai</p>
-          <p>299/-</p>
-        </div>
-      </div>
+          <p className="text-sm md:text-base font-medium">{tea.name}</p>
+          <p className="text-sm text-gray-600">{tea.price}</p>
+        </div>))
+      }
     </div>
   </div>);
 };
