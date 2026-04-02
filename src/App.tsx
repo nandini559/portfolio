@@ -69,8 +69,7 @@ const App: React.FC = () => {
 
       <Routes>
         <Route path="/home" element={<PortfolioHome />}/>
-        <Route path="/portfolio" element={<Main />}/>
-        <Route path="/" element={<Login />}/>
+        <Route path="/portfolio" element={<Main />}/> {/* <Route path="/" element={<Login />}/> */}
         <Route path="/project" element={<Project />}/>
         <Route path="/singularies.ventures" element={<SingulariesHome />}/>
         <Route path="/gemlay" element={<GemlayHome />}/>
@@ -82,7 +81,7 @@ const App: React.FC = () => {
           <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>{" "}
         </Route>
         <Route path="/register" element={<Register />}/>
-        <Route path="/campbell-tea" element={<CampbellTeaHome />}/>{" "}
+        <Route path="/" element={<CampbellTeaHome />}/>{" "}
         <Route path="/campbell-tea-home" element={<CampbellTeaHome />}/>{" "}
         {/* <Route path="/campbell-tea-home" element={<Hero />}/> */}
         <Route path="/campbell-tea-blog" element={<Blog />}/>
