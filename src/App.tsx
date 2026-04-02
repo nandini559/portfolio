@@ -21,6 +21,11 @@ import PortfolioHome from "./Pages/My Portfolio/components/portfolioHome";
 import ProtectedRoute from "./routes/protectedRoute";
 import Contact from "./Pages/portfolio/components/contact";
 import CampbellTeaHome from "./Pages/campBell Tea/components/campbellTeaHome";
+import Products from "./Pages/campBell Tea/components/products";
+import Blog from "./Pages/campBell Tea/components/blog";
+import About from "./Pages/campBell Tea/components/about";
+import ContactHere from "./Pages/campBell Tea/components/contacthere";
+import Hero from "./Pages/campBell Tea/components/hero";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<any[]>([]);
@@ -77,7 +82,14 @@ const App: React.FC = () => {
           <Route path="/expense-tracker" element={<ExpanseTrackerHome />}/>{" "}
         </Route>
         <Route path="/register" element={<Register />}/>
-        <Route path="/campbell-tea" element={<CampbellTeaHome />}/>
+        <Route path="/campbell-tea" element={<CampbellTeaHome />}/>{" "}
+        <Route path="/campbell-tea-home" element={<CampbellTeaHome />}/>{" "}
+        {/* <Route path="/campbell-tea-home" element={<Hero />}/> */}
+        <Route path="/campbell-tea-blog" element={<Blog />}/>
+        <Route path="/campbell-tea-products" element={<Products />}/>
+        <Route path="/campbell-tea-about" element={<About />}/>
+        <Route path="/campbell-tea-contact" element={<ContactHere />}/>
+        <Route path="/campbell-tea-home" element={<Hero />}/>
       </Routes>
     </Router>
   </div>);

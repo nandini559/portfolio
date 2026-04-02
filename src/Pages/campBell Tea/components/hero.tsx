@@ -1,7 +1,9 @@
 import React from "react";
+import Navbar from "./navbar";
 
 const Hero = () => {
   return (<div>
+    <Navbar/>
     <div className="flex p-4">
       <div className="w-2/5 ml-8">
         <p className="font-thin mb-6 text-amber-900 text-sm mt-5">
@@ -19,7 +21,7 @@ const Hero = () => {
       </div>
 
       <div className="w-2/3">
-        <img src="https://campbell-tea.vercel.app/_next/image?url=%2Fimages%2Fhero-section.png&w=1080&q=75" alt="tea"></img>
+        <img src="/asset/campbell-tea/hero-section.webp" alt="tea"></img>
       </div>
     </div>
   </div>);

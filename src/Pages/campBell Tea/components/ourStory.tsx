@@ -4,7 +4,7 @@ const OurStory = () => {
   return (<div>
     <div className="flex gap-10 bg-slate-50 mt-32 ">
       <div className="w-1/2 mt-20 p-4">
-        <img src="https://campbell-tea.vercel.app/_next/image?url=%2Fimages%2Four-story-section.png&w=2048&q=75" alt="tea"></img>
+        <img src="/asset/campbell-tea/our-story-section.webp" alt="tea"></img>
       </div>
 
       <div className="w-1/2 mt-40 p-6">

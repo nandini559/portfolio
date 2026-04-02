@@ -9,7 +9,6 @@ import Footer from "./footer";
 const CampbellTeaHome = () => {
   return (<div>
     <div>
-      <Navbar/>
       <Hero/>
       <TeaCollection/>
       <OurStory/>
