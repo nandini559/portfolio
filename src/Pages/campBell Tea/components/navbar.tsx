@@ -10,7 +10,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  return (<div className="w-full max-w-full overflow-x-hidden sticky top-0 z-50 bg-white">
+  return (<div className="w-full max-w-full overflow-x-hidden sticky top-0 z-50 ">
     {/* Top Banner */}
     <p className="bg-black text-white text-center text-[10px] sm:text-xs py-2 px-2 leading-tight">
       FLAT 10% OFF ON EVERY ORDER | USE CODE: CAMPBELL10

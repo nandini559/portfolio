@@ -9,7 +9,7 @@ const Hero = () => {
     navigate(path);
     setIsOpen(false);
   };
-  return (<div className="w-full overflow-x-hidden">
+  return (<div className="w-full overflow-x-hidden ">
     <Navbar/>
 
     <div className="flex flex-col md:flex-row items-center w-full px-3 sm:px-4 md:px-10 py-6 md:py-10 gap-6 md:gap-10">

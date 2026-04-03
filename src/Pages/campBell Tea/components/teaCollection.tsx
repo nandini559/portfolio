@@ -3,7 +3,7 @@ import React from "react";
 const teas = Array(12).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243"});
 
 const TeaCollection = () => {
-  return (<div className="bg-white px-3 sm:px-5 md:px-10 py-6 md:py-10 max-w-screen overflow-hidden">
+  return (<div className=" px-3 sm:px-5 md:px-10 py-6 md:py-10 max-w-screen overflow-hidden">
     {/* Heading */}
     <p className="font-thin mb-1 text-amber-900 text-xs sm:text-sm text-center md:text-left">
       THE COLLECTION

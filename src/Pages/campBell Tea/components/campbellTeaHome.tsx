@@ -7,7 +7,7 @@ import Footer from "./footer";
 
 const CampbellTeaHome = () => {
   return (<div>
-    <div>
+    <div className="">
       <Hero/>
       <TeaCollection/>
       <OurStory/>
