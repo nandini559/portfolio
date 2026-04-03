@@ -1,21 +1,21 @@
 import React from "react";
 
 const Footer = () => {
-  return (<div className="mt-10 bg-slate-50 font-thin">
+  return (<div className="mt-8 bg-slate-50 font-thin w-full overflow-x-hidden">
     {/* Top Section */}
-    <div className="flex flex-col md:flex-row gap-10 px-5 md:px-10 py-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 px-3 sm:px-4 md:px-10 py-8 md:py-10">
       {/* Brand */}
-      <div className="w-full md:w-1/4">
-        <p className="mb-3 text-lg md:text-xl">CampbellTea</p>
-        <p className="text-sm md:text-base">
+      <div className="text-center sm:text-left">
+        <p className="mb-2 text-base sm:text-lg md:text-xl">CampbellTea</p>
+        <p className="text-xs sm:text-sm md:text-base">
           Premium Indian tea, thoughtfully sourced and carefully crafted. A daily ritual, elevated.
         </p>
       </div>
 
       {/* Quick Links */}
-      <div className="w-full md:w-1/4">
-        <p className="mb-3 text-sm">Quick Links</p>
-        <div className="flex flex-col gap-1 text-sm md:text-base">
+      <div className="text-center sm:text-left">
+        <p className="mb-2 text-xs sm:text-sm">Quick Links</p>
+        <div className="flex flex-col gap-1 text-xs sm:text-sm md:text-base">
           <p>About Us</p>
           <p>Our Teas</p>
           <p>Contact</p>
@@ -23,9 +23,9 @@ const Footer = () => {
       </div>
 
       {/* Policies */}
-      <div className="w-full md:w-1/4">
-        <p className="mb-3 text-sm">Policies</p>
-        <div className="flex flex-col gap-1 text-sm md:text-base">
+      <div className="text-center sm:text-left">
+        <p className="mb-2 text-xs sm:text-sm">Policies</p>
+        <div className="flex flex-col gap-1 text-xs sm:text-sm md:text-base">
           <p>Privacy Policy</p>
           <p>Shipping Policy</p>
           <p>Refund Policy</p>
@@ -34,15 +34,15 @@ const Footer = () => {
       </div>
 
       {/* Subscribe */}
-      <div className="w-full md:w-1/4">
-        <p className="mb-3 text-sm">STAY UPDATED</p>
-        <p className="text-sm md:text-base mb-3">
+      <div className="text-center sm:text-left">
+        <p className="mb-2 text-xs sm:text-sm">STAY UPDATED</p>
+        <p className="text-xs sm:text-sm md:text-base mb-3">
           Subscribe for special offers and new arrivals
         </p>
 
-        <div className="flex w-full">
-          <input type="email" placeholder="Your Email" className="flex-1 p-3 border text-sm outline-none"/>
-          <button className="text-amber-800 px-4 border hover:bg-amber-700 hover:text-white transition">
+        <div className="flex w-full max-w-sm mx-auto sm:mx-0">
+          <input type="email" placeholder="Your Email" className="flex-1 p-2 text-xs sm:text-sm border outline-none rounded-l-md"/>
+          <button className="text-amber-800 px-3 sm:px-4 border border-l-0 rounded-r-md hover:bg-amber-700 hover:text-white transition text-xs sm:text-sm">
             Join
           </button>
         </div>
@@ -50,7 +50,7 @@ const Footer = () => {
     </div>
 
     {/* Bottom Section */}
-    <div className="text-center md:text-left px-5 md:px-10 py-5 border-t text-sm">
+    <div className="text-center md:text-left px-3 sm:px-4 md:px-10 py-4 border-t text-xs sm:text-sm">
       © 2026 Campbell Tea. All rights reserved.
     </div>
   </div>);

@@ -1,25 +1,31 @@
 import React from "react";
 
-const teas = Array(10).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243"});
+const teas = Array(12).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243"});
 
 const TeaCollection = () => {
-  return (<div className="bg-white px-5 md:px-10 py-10">
+  return (<div className="bg-white px-3 sm:px-5 md:px-10 py-6 md:py-10 max-w-screen overflow-hidden">
     {/* Heading */}
-    <p className="font-thin mb-2 text-amber-900 text-xs md:text-sm">
+    <p className="font-thin mb-1 text-amber-900 text-xs sm:text-sm text-center md:text-left">
       THE COLLECTION
     </p>
-    <p className="text-3xl md:text-5xl mb-8">Our Teas</p>
+    <p className="text-xl sm:text-2xl md:text-5xl mb-4 md:mb-8 text-center md:text-left">
+      Our Teas
+    </p>
 
-    {/* Responsive Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+    {/* Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-4 md:gap-6">
       {
-        teas.map((tea, index) => (<div key={index} className="bg-slate-100 p-3 rounded-xl hover:shadow-md transition">
-          <p className="text-amber-900 text-xs font-thin mb-2">{tea.tag}</p>
+        teas.map((tea, index) => (<div key={index} className="bg-slate-100 p-2 rounded-lg hover:shadow-sm transition w-full">
+          <p className="text-amber-900 text-[10px] sm:text-xs font-thin mb-1">
+            {tea.tag}
+          </p>
 
-          <img src={tea.image} alt="tea" className="w-full h-40 object-cover rounded-md mb-3"/>
+          <img src={tea.image} alt="tea" className="w-full aspect-square object-cover rounded-md mb-2"/>
 
-          <p className="text-sm md:text-base font-medium">{tea.name}</p>
-          <p className="text-sm text-gray-600">{tea.price}</p>
+          <p className="text-xs sm:text-sm font-medium leading-tight line-clamp-2">
+            {tea.name}
+          </p>
+          <p className="text-[11px] sm:text-sm text-gray-600">{tea.price}</p>
         </div>))
       }
     </div>
