@@ -1,10 +1,105 @@
-import React from "react";
 import Footer from "./footer";
 import Navbar from "./navbar";
-
-const teas = Array(12).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "/asset/campbell-tea/tea5.webp"});
-
+import React, {useState} from "react";
+const teas = [
+  {
+    id: 1,
+    name: "Special Masala Chai",
+    price: "₹299",
+    tag: "Bestseller",
+    image: "/asset/campbell-tea/tea10.jpeg",
+    category: "CHAI"
+  }, {
+    id: 2,
+    name: "Elaichi Chai",
+    price: "₹249",
+    tag: "Popular",
+    image: "/asset/campbell-tea/tea2.webp",
+    category: "CHAI"
+  }, {
+    id: 3,
+    name: "Ginger Chai",
+    price: "₹279",
+    tag: "Hot",
+    image: "/asset/campbell-tea/tea5.webp",
+    category: "CHAI"
+  }, {
+    id: 4,
+    name: "Green Tea",
+    price: "₹199",
+    tag: "Healthy",
+    image: "/asset/campbell-tea/tea7.jpg",
+    category: "GREEN TEA"
+  }, {
+    id: 5,
+    name: "Kashmiri Kahwa",
+    price: "₹349",
+    tag: "Premium",
+    image: "/asset/campbell-tea/tea6.avif",
+    category: "GREEN TEA"
+  }, {
+    id: 6,
+    name: "Lemon Tea",
+    price: "₹199",
+    tag: "Refreshing",
+    image: "/asset/campbell-tea/tea11.jpg",
+    category: "GREEN TEA"
+  }, {
+    id: 7,
+    name: "Tulsi Tea",
+    price: "₹229",
+    tag: "Ayurvedic",
+    image: "/asset/campbell-tea/tea12.avif",
+    category: "GREEN TEA"
+  }, {
+    id: 8,
+    name: "Chamomile Tea",
+    price: "₹399",
+    tag: "Relax",
+    image: "/asset/campbell-tea/tea13.jpg",
+    category: "GREEN TEA"
+  }, {
+    id: 9,
+    name: "Oolong Tea",
+    price: "₹449",
+    tag: "Exotic",
+    image: "/asset/campbell-tea/tea14.avif",
+    category: "BLACK TEA"
+  }, {
+    id: 10,
+    name: "Mint Tea",
+    price: "₹199",
+    tag: "Cool",
+    image: "/asset/campbell-tea/tea5.webp",
+    category: "GREEN TEA"
+  }, {
+    id: 11,
+    name: "Black Tea",
+    price: "₹149",
+    tag: "Classic",
+    image: "/asset/campbell-tea/tea10.jpeg",
+    category: "BLACK TEA"
+  }, {
+    id: 12,
+    name: "Rose Tea",
+    price: "₹299",
+    tag: "Floral",
+    image: "/asset/campbell-tea/tea15.jpg",
+    category: "GREEN TEA"
+  }
+];
 const Products = () => {
+  const [filter, setFilter] = useState("ALL");
+  const [showAll, setShowAll] = useState(false);
+
+  const filteredTeas = filter === "ALL"
+    ? teas
+    : teas.filter((tea) => tea.category === filter);
+
+  const visibleTeas = showAll
+    ? filteredTeas
+    : filteredTeas.slice(0, 4);
+
   return (<div className="w-full overflow-x-hidden">
     <Navbar/> {/* Hero Section */}
     <div className="text-center px-3 sm:px-4 md:px-10 py-8 md:py-14 border-b">
@@ -21,23 +116,42 @@ const Products = () => {
     </div>
     {/* Filters */}
     <div className="flex flex-wrap justify-center md:justify-start gap-2 px-3 sm:px-4 md:px-10 mt-6">
-      <button className="border px-4 py-1 text-xs sm:text-sm font-thin  hover:bg-amber-700 hover:text-white transition">
+      <button onClick={() => setFilter("ALL")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
+${
+        filter === "CHAI"
+          ? "bg-amber-700 text-white"
+          : "hover:bg-amber-700 hover:text-white"}`}>
         All
       </button>
-      <button className="border px-4 py-1 text-xs sm:text-sm font-thin  hover:bg-amber-700 hover:text-white transition">
+
+      <button onClick={() => setFilter("CHAI")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
+${
+        filter === "CHAI"
+          ? "bg-amber-700 text-white"
+          : "hover:bg-amber-700 hover:text-white"}`}>
         CHAI
       </button>
-      <button className="border px-4 py-1 text-xs sm:text-sm font-thin  hover:bg-amber-700 hover:text-white transition">
+
+      <button onClick={() => setFilter("GREEN TEA")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
+${
+        filter === "CHAI"
+          ? "bg-amber-700 text-white"
+          : "hover:bg-amber-700 hover:text-white"}`}>
         GREEN TEA
       </button>
-      <button className="border px-4 py-1 text-xs sm:text-sm font-thin  hover:bg-amber-700 hover:text-white transition">
+
+      <button onClick={() => setFilter("BLACK TEA")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
+${
+        filter === "CHAI"
+          ? "bg-amber-700 text-white"
+          : "hover:bg-amber-700 hover:text-white"}`}>
         BLACK TEA
       </button>
     </div>
     {/* Product Grid */}
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-4 md:gap-6 px-3 sm:px-4 md:px-10 mt-6 md:mt-10">
       {
-        teas.map((tea, index) => (<div key={index} className={`bg-slate-50 p-2 rounded-lg hover:shadow-sm transition
+        visibleTeas.map((tea, index) => (<div key={tea.id} className={`bg-slate-50 p-2 rounded-lg hover:shadow-sm transition
           ${index >= 4
             ? "hidden md:block"
             : ""}`}>
@@ -54,8 +168,12 @@ const Products = () => {
         </div>))
       }
     </div>
-    <button className="mt-4 text-sm text-amber-700 underline md:hidden text-center w-full">
-      View All Products →
+    <button onClick={() => setShowAll(!showAll)} className="mt-4 text-sm text-amber-700 underline md:hidden text-center w-full">
+      {
+        showAll
+          ? "Show Less ←"
+          : "View All Products →"
+      }
     </button>
     <Footer/>
   </div>);
