@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./footer";
 import Navbar from "./navbar";
 
-const teas = Array(12).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "https://maharishiayurvedaindia.com/cdn/shop/articles/herbal_teas_and_benefits_5349b7d2-95dd-41ea-9336-b25212d1019d.jpg?v=1771406243"});
+const teas = Array(12).fill({name: "Special Masala Chai", price: "₹299", tag: "Bestseller", image: "/asset/campbell-tea/tea5.webp"});
 
 const Products = () => {
   return (<div className="w-full overflow-x-hidden">
@@ -37,7 +37,10 @@ const Products = () => {
     {/* Product Grid */}
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-4 md:gap-6 px-3 sm:px-4 md:px-10 mt-6 md:mt-10">
       {
-        teas.map((tea, index) => (<div key={index} className="bg-slate-50 p-2 rounded-lg hover:shadow-sm transition">
+        teas.map((tea, index) => (<div key={index} className={`bg-slate-50 p-2 rounded-lg hover:shadow-sm transition
+          ${index >= 4
+            ? "hidden md:block"
+            : ""}`}>
           <p className="text-amber-900 text-[10px] sm:text-xs font-thin mb-1">
             {tea.tag}
           </p>
@@ -51,6 +54,9 @@ const Products = () => {
         </div>))
       }
     </div>
+    <button className="mt-4 text-sm text-amber-700 underline md:hidden text-center w-full">
+      View All Products →
+    </button>
     <Footer/>
   </div>);
 };
