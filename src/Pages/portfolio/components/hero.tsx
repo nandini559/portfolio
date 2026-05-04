@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNav = (path : string) => {
+    navigate(path);
+    setIsOpen(false);
+  };
+
   return (
   //  <!-- Hero Section -->
   <div className="  pt-20 pb-16 pl-4 pr-4">
@@ -12,12 +21,12 @@ const Hero = () => {
       </h1>
 
       <div className="hero__cta text-center flex gap-3 justify-center pt-10">
-        <a href="#about" className=" p-4 font-bold border-2 border-black rounded-xl">
+        <button className=" p-4 font-bold border-2 border-black rounded-xl">
           Explore My Journey
-        </a>
-        <a href="#contact" className=" px-8 py-4 font-bold border-2 border-black rounded-xl">
+        </button>
+        <button className=" px-8 py-4 font-bold border-2 border-black rounded-xl" onClick={() => handleNav("/contact")}>
           Get In Touch
-        </a>
+        </button>
       </div>
     </div>
   </div>);

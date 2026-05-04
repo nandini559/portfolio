@@ -23,16 +23,16 @@ const Contact = () => {
   };
 
   return (<div className="flex items-center justify-center min-h-screen ">
-    <form onSubmit={handleSubmit} className="border-2 shadow-xl rounded-2xl  w-[350px] flex flex-col gap-4 p-10">
-      <p className="text-7xl font-semibold text-center ">Contact</p>
+    <form onSubmit={handleSubmit} className="border border-black shadow-xl rounded-2xl  w-[350px] flex flex-col gap-4 p-10">
+      <p className="text-5xl font-semibold text-center ">Contact</p>
 
-      <input name="Name" placeholder="Name" className="p-2 border rounded-lg outline-none focus:ring-2 focus:ring-purple-400"/>
+      <input name="Name" placeholder="Name" className="p-2 border rounded-lg outline-none focus:ring-2 "/>
 
-      <input name="email" placeholder="Email" className="p-2 border rounded-lg outline-none focus:ring-2 focus:ring-purple-400"/>
+      <input name="email" placeholder="Email" className="p-2 border rounded-lg outline-none focus:ring-2 "/>
 
-      <input name="Message" placeholder="Message" className="p-2 border rounded-lg outline-none focus:ring-2 focus:ring-purple-400"/>
+      <input name="Message" placeholder="Message" className="p-2 border rounded-lg outline-none focus:ring-2 "/>
 
-      <button type="submit" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg font-semibold hover:scale-105 transition">
+      <button type="submit" className="border border-black py-2 rounded-lg font-semibold hover:scale-105 transition">
         Send Message
       </button>
     </form>

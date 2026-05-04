@@ -4,8 +4,6 @@ import Project from "./Pages/portfolio/projects/project";
 import GemlayHome from "./Pages/Gemlay Website/components/gemlayHome";
 import Home from "./Pages/TCS/components/tcsHome";
 import TcsHome from "./Pages/TCS/components/tcsHome";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Gmeet from "./Pages/GoogleMeet/components/gmeet";
 import Main from "./Pages/portfolio/components/main";
 import NftHome from "./Pages/NFT Landing page/components/nftHome";
@@ -14,7 +12,6 @@ import ExpanseTrackerHome from "./Pages/Expanse Tracker/expanseTrackerHome";
 import {addExpense, deleteExpense, getExpenses} from "./api/expanseBackendAPI";
 import {Expense} from "./types/expanse";
 import {ToastContainer} from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Login from "./Pages/Expanse Tracker/login";
 import Register from "./Pages/Expanse Tracker/register";
 import PortfolioHome from "./Pages/My Portfolio/components/portfolioHome";
@@ -69,7 +66,8 @@ const App: React.FC = () => {
 
       <Routes>
         <Route path="/home" element={<PortfolioHome />}/>
-        <Route path="/portfolio" element={<Main />}/> {/* <Route path="/" element={<Login />}/> */}
+        <Route path="/portfolio" element={<Main />}/>{" "}
+        {/* <Route path="/" element={<Login />}/> */}
         <Route path="/project" element={<Project />}/>
         <Route path="/singularies.ventures" element={<SingulariesHome />}/>
         <Route path="/gemlay" element={<GemlayHome />}/>

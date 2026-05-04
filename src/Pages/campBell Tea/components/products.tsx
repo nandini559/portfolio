@@ -118,7 +118,7 @@ const Products = () => {
     <div className="flex flex-wrap justify-center md:justify-start gap-2 px-3 sm:px-4 md:px-10 mt-6">
       <button onClick={() => setFilter("ALL")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
 ${
-        filter === "CHAI"
+        filter === "ALL"
           ? "bg-amber-700 text-white"
           : "hover:bg-amber-700 hover:text-white"}`}>
         All
@@ -134,7 +134,7 @@ ${
 
       <button onClick={() => setFilter("GREEN TEA")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
 ${
-        filter === "CHAI"
+        filter === "GREEN TEA"
           ? "bg-amber-700 text-white"
           : "hover:bg-amber-700 hover:text-white"}`}>
         GREEN TEA
@@ -142,7 +142,7 @@ ${
 
       <button onClick={() => setFilter("BLACK TEA")} className={`border px-4 py-1 text-xs sm:text-sm font-thin transition
 ${
-        filter === "CHAI"
+        filter === "BLACK TEA"
           ? "bg-amber-700 text-white"
           : "hover:bg-amber-700 hover:text-white"}`}>
         BLACK TEA
