@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const PortfolioAbout = () => {
   return (
   // <!-- About Section -->
   <section className="about  pt-52 pb-52" id="about">
@@ -20,7 +20,7 @@ const About = () => {
             Hi, I’m Nandini Tarafdar I’m a full-stack developer with a strong interest in building clean, user-centric web applications. I enjoy working across both frontend and backend, creating seamless experiences that are not only functional but also thoughtfully designed.
           </p>
           <p className="text-black text-sm font-semibold mb-3 leading-6">
-            I have hands-on experience with modern technologies like React, Tailwind CSS, and backend frameworks, and I’m always looking to expand my skill set by exploring new tools and best practices. I value writing maintainable code, paying attention to detail, and building solutions that scale.
+            I have hands-on experience with modern technologies like React, Tailwind CSS, and backend technologies like NodeJS, NestJS, Prisma, mySQL and I’m always looking to expand my skill set by exploring new tools and best practices. I value writing maintainable code, paying attention to detail, and building solutions that scale.
           </p>
           <p className="text-black text-sm font-semibold mb-3 leading-6">
             I approach problems with curiosity and a practical mindset, and I enjoy collaborating as much as I do working independently. Continuous learning and improvement are important to me, and I’m always looking for opportunities to grow as a developer.
@@ -54,4 +54,4 @@ const About = () => {
   </section>);
 };
 
-export default About;
+export default PortfolioAbout;

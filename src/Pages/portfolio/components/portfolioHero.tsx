@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-const Hero = () => {
+const PortfolioHero = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,4 +32,4 @@ const Hero = () => {
   </div>);
 };
 
-export default Hero;
+export default PortfolioHero;

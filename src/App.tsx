@@ -23,6 +23,11 @@ import Blog from "./Pages/campBell Tea/components/blog";
 import About from "./Pages/campBell Tea/components/about";
 import ContactHere from "./Pages/campBell Tea/components/contacthere";
 import Hero from "./Pages/campBell Tea/components/hero";
+import PortfolioAbout from "./Pages/portfolio/components/portfolioAbout";
+import PortfolioHero from "./Pages/portfolio/components/portfolioHero";
+import PortfolioNavbar from "./Pages/portfolio/components/portfolioNavbar";
+import PortfolioEducation from "./Pages/portfolio/components/portfolioEducation";
+import PortfolioProjects from "./Pages/portfolio/components/portfolioProjects";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<any[]>([]);
@@ -65,8 +70,7 @@ const App: React.FC = () => {
       <ToastContainer position="top-right" autoClose={2000}/>
 
       <Routes>
-        <Route path="/home" element={<PortfolioHome />}/>
-        <Route path="/portfolio" element={<Main />}/>{" "}
+        <Route path="/home" element={<PortfolioHome />}/>{" "}
         {/* <Route path="/" element={<Login />}/> */}
         <Route path="/project" element={<Project />}/>
         <Route path="/singularies.ventures" element={<SingulariesHome />}/>
@@ -87,6 +91,12 @@ const App: React.FC = () => {
         <Route path="/campbell-tea-about" element={<About />}/>
         <Route path="/campbell-tea-contact" element={<ContactHere />}/>
         <Route path="/campbell-tea-home" element={<Hero />}/>
+        <Route path="/portfolio" element={<Main />}/>
+        <Route path="/portfolio.about" element={<PortfolioAbout />}/>
+        <Route path="/portfolio.hero" element={<PortfolioHero />}/>
+        <Route path="/portfolio.navbar" element={<PortfolioNavbar />}/>
+        <Route path="/portfolio.education" element={<PortfolioEducation />}/>
+        <Route path="/portfolio.projects" element={<PortfolioProjects />}/>
       </Routes>
     </Router>
   </div>);
