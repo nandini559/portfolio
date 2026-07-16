@@ -4,7 +4,7 @@ const PortfolioEducation = () => {
   const educationData = [
     {
       id: 1,
-      degree: "Bachelor of Computer Application",
+      degree: "Bachelor of Computer Application (BCA)",
       college: "Raiganj University",
       year: "2023 - 2027",
       description: "Currently pursuing BCA from Raiganj University."
@@ -23,27 +23,29 @@ const PortfolioEducation = () => {
     }
   ];
 
-  return (<div className="min-h-screen  p-8">
-    {/* Heading */}
-    <h1 className="text-6xl font-bold text-center mb-10">Education</h1>
+  return (<section id="education">
+    <div className="min-h-screen  p-8">
+      {/* Heading */}
+      <h1 className="text-6xl font-bold text-center mb-10">Education</h1>
 
-    {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {
-        educationData.map((item) => (<div key={item.id} className="border border-black rounded-2xl shadow-lg p-6 hover:scale-105 transition duration-300">
-          <h2 className="text-2xl font-bold mb-2">{item.degree}</h2>
+      {/* Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          educationData.map((item) => (<div key={item.id} className="border border-black rounded-2xl shadow-lg p-6 hover:scale-105 transition duration-300">
+            <h2 className="text-2xl font-bold mb-2">{item.degree}</h2>
 
-          <h3 className="text-lg font-semibold text-gray-700 mb-2">
-            {item.college}
-          </h3>
+            <h3 className="text-lg font-semibold text-gray-700 mb-2">
+              {item.college}
+            </h3>
 
-          <p className="text-sm text-gray-500 mb-4">{item.year}</p>
+            <p className="text-sm text-gray-500 mb-4">{item.year}</p>
 
-          <p className="text-gray-600">{item.description}</p>
-        </div>))
-      }
+            <p className="text-gray-600">{item.description}</p>
+          </div>))
+        }
+      </div>
     </div>
-  </div>);
+  </section>);
 };
 
 export default PortfolioEducation;

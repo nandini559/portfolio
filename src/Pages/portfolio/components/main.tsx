@@ -1,8 +1,11 @@
+import Contact from "./contact";
+import PortfolioFooter from "./portfolio.footer";
 import PortfolioAbout from "./portfolioAbout";
 import PortfolioEducation from "./portfolioEducation";
 import PortfolioHero from "./portfolioHero";
 import PortfolioNavbar from "./portfolioNavbar";
 import PortfolioProjects from "./portfolioProjects";
+import PortfolioSkills from "./portfolioSkills";
 
 const Main = () => {
   return (<div style={{
@@ -13,8 +16,11 @@ const Main = () => {
       <PortfolioNavbar/>
       <PortfolioHero/>
       <PortfolioAbout/>
+      <PortfolioSkills/>
       <PortfolioEducation/>
       <PortfolioProjects/>
+      <Contact/>
+      <PortfolioFooter/>
     </div>
   </div>);
 };

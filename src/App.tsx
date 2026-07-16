@@ -28,6 +28,8 @@ import PortfolioHero from "./Pages/portfolio/components/portfolioHero";
 import PortfolioNavbar from "./Pages/portfolio/components/portfolioNavbar";
 import PortfolioEducation from "./Pages/portfolio/components/portfolioEducation";
 import PortfolioProjects from "./Pages/portfolio/components/portfolioProjects";
+import PortfolioSkills from "./Pages/portfolio/components/portfolioSkills";
+import {Toaster} from "react-hot-toast";
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<any[]>([]);
@@ -68,7 +70,7 @@ const App: React.FC = () => {
   return (<div className="font-san ">
     <Router>
       <ToastContainer position="top-right" autoClose={2000}/>
-
+      <Toaster position="top-right"/>
       <Routes>
         <Route path="/home" element={<PortfolioHome />}/>{" "}
         {/* <Route path="/" element={<Login />}/> */}
@@ -97,6 +99,7 @@ const App: React.FC = () => {
         <Route path="/portfolio.navbar" element={<PortfolioNavbar />}/>
         <Route path="/portfolio.education" element={<PortfolioEducation />}/>
         <Route path="/portfolio.projects" element={<PortfolioProjects />}/>
+        <Route path="/portfolio.skills" element={<PortfolioSkills />}/>
       </Routes>
     </Router>
   </div>);

@@ -1,56 +1,30 @@
 import React from "react";
 
 const PortfolioAbout = () => {
-  return (
-  // <!-- About Section -->
-  <section className="about  pt-52 pb-52" id="about">
-    <div className="section__header text-center  ">
-      <h2 className="section__title  text-7xl font-bold text-black">
+  return (<section id="about" className="about py-16 sm:py-20 md:py-24 lg:py-32">
+    <div className="text-center">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black">
         About Me
       </h2>
-      {/* <p className="section__subtitle mt-4 text-black font-semibold text-sm">
-        Hi I'm Nandini Tarafdar
-      </p> */
-      }
-      </div>
+    </div>
 
-      <div className="flex  place-content-between pl-52 pr-52 mt-10">
-        <div className=" mt-4">
-          <p className="text-black text-sm font-semibold mb-3 leading-6">
-            Hi, I’m Nandini Tarafdar I’m a full-stack developer with a strong interest in building clean, user-centric web applications. I enjoy working across both frontend and backend, creating seamless experiences that are not only functional but also thoughtfully designed.
-          </p>
-          <p className="text-black text-sm font-semibold mb-3 leading-6">
-            I have hands-on experience with modern technologies like React, Tailwind CSS, and backend technologies like NodeJS, NestJS, Prisma, mySQL and I’m always looking to expand my skill set by exploring new tools and best practices. I value writing maintainable code, paying attention to detail, and building solutions that scale.
-          </p>
-          <p className="text-black text-sm font-semibold mb-3 leading-6">
-            I approach problems with curiosity and a practical mindset, and I enjoy collaborating as much as I do working independently. Continuous learning and improvement are important to me, and I’m always looking for opportunities to grow as a developer.
-          </p>
-          <p className="text-black text-sm font-semibold mb-3 leading-6">
-            I’m currently seeking opportunities where I can contribute to meaningful projects, learn from experienced teams, and further develop my technical and problem-solving skills.
-          </p>
-        </div>
+    <div className="max-w-5xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 xl:px-24 mt-10">
+      <p className="text-black text-sm sm:text-base leading-7 font-medium mb-5 text-justify">
+        Hi, I’m Nandini Tarafdar. I’m a full-stack developer with a strong interest in building clean, user-centric web applications. I enjoy working across both frontend and backend, creating seamless experiences that are not only functional but also thoughtfully designed.
+      </p>
 
-        {/* <div className=" rows-2  grid grid-cols-2 gap-6">
-        <div className="bg-neutral-800 p-8  rounded-2xl text-center ">
-          <p className="font-bold text-black text-4xl ">19+</p>
-          <p className="text-black text-xs mt-3">Years Experience</p>
-        </div>
+      <p className="text-black text-sm sm:text-base leading-7 font-medium mb-5 text-justify">
+        I have hands-on experience with modern technologies like React, Tailwind CSS, Node.js, NestJS, Prisma, and MySQL. I'm always looking to expand my skill set by exploring new tools and best practices. I value writing maintainable code, paying attention to detail, and building solutions that scale.
+      </p>
 
-        <div className="bg-neutral-800 p-8  rounded-2xl text-center">
-          <p className="font-bold text-black text-4xl">50+</p>
-          <p className="text-black text-xs mt-3">Team Members Led</p>
-        </div>
-        <div className="bg-neutral-800 p-8  rounded-2xl text-center">
-          <p className="font-bold text-black text-4xl">Top 50</p>
-          <p className="text-black text-xs mt-3">Insurtech Ranking</p>
-        </div>
-        <div className="bg-neutral-800 p-8  rounded-2xl text-center">
-          <p className="font-bold text-black text-4xl">40</p>
-          <p className="text-black text-xs mt-3">Startup Margin</p>
-        </div>
-      </div> */
-      }
-      </div>
+      <p className="text-black text-sm sm:text-base leading-7 font-medium mb-5 text-justify">
+        I approach problems with curiosity and a practical mindset, and I enjoy collaborating as much as I do working independently. Continuous learning and improvement are important to me, and I’m always looking for opportunities to grow as a developer.
+      </p>
+
+      <p className="text-black text-sm sm:text-base leading-7 font-medium text-justify">
+        I’m currently seeking opportunities where I can contribute to meaningful projects, learn from experienced teams, and further develop my technical and problem-solving skills.
+      </p>
+    </div>
   </section>);
 };
 
